@@ -58,7 +58,7 @@ Execute the scripts sequentially in the following order:
     * Observe the output in the console to see the model's generated responses.
 
 Or you can just run:
-    ```bash
+ ```bash
     sbatch run_finetune.sh
     ```
 
