@@ -65,6 +65,12 @@ Execute the scripts sequentially in the following order:
     ```
     * Observe the output in the console to see the model's generated responses.
 
+Or you can just run:
+    ```bash
+    sbatch run_finetune.sh
+    ```
+
+
 ## Configuration
 
 You can modify parameters within each script:
