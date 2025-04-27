@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project demonstrates how to fine-tune a Meta Llama 3.2 Instruct model (specifically `unsloth/Llama-3.2-3B-Instruct` or `unsloth/Llama-3.2-1B-Instruct`) using the Unsloth library for efficient LoRA (Low-Rank Adaptation) training. The goal is to adapt the pre-trained model to a specific conversational style using the `mlabonne/FineTome-100k` dataset.
+This project demonstrates how to fine-tune a Meta Llama 3.2 Instruct model (specifically `unsloth/Llama-3.2-3B-Instruct` or whatever you want) using the Unsloth library for efficient LoRA (Low-Rank Adaptation) training. The goal is to adapt the pre-trained model to a specific conversational style using the `mlabonne/FineTome-100k` dataset.
 
 The process is divided into three main steps, each handled by a separate Python script:
 1.  **Downloading Resources:** Fetching the base model, tokenizer, and dataset.
@@ -28,14 +28,6 @@ The process is divided into three main steps, each handled by a separate Python 
     # Install Unsloth (includes dependencies like torch, transformers, peft, accelerate, bitsandbytes)
     # Follow official Unsloth installation instructions for your OS/environment:
     # [https://github.com/unslothai/unsloth#installation](https://github.com/unslothai/unsloth#installation)
-
-    # Ensure specific versions if needed (check Unsloth docs for compatibility)
-    pip install "unsloth[colab-new] @ git+[https://github.com/unslothai/unsloth.git](https://github.com/unslothai/unsloth.git)" # Example Colab install
-    pip install --no-deps trl==0.15.2 # Example specific version install if needed
-    pip install datasets huggingface_hub hf_transfer # For data handling and faster downloads
-
-    # Enable faster Hugging Face Hub downloads (optional)
-    export HF_HUB_ENABLE_HF_TRANSFER=1
     ```
     *Note: Refer to the original `llama3_2_(1b_and_3b)_conversational.py` or the Unsloth documentation for the exact dependencies and versions if you encounter issues.*
 
@@ -69,13 +61,4 @@ Or you can just run:
     ```bash
     sbatch run_finetune.sh
     ```
-
-
-## Configuration
-
-You can modify parameters within each script:
-
-* **`download_model_dataset.py`:** Change `model_name`, `dataset_name`, save directories.
-* **`finetune.py`:** Adjust `model_load_dir`, `dataset_load_dir`, `lora_save_dir`, LoRA parameters (`lora_r`, `lora_alpha`), training arguments (`max_steps`, `learning_rate`, `per_device_train_batch_size`, etc.).
-* **`test_usage.py`:** Modify model/adapter load directories, `num_test_samples`, generation parameters (`max_new_tokens`, `temperature`, `min_p`).
 
