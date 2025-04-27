@@ -22,7 +22,7 @@ The process is divided into three main steps, each handled by a separate Python 
 ## Prerequisites
 
 1.  **Python Environment:** Python 3.9+ is recommended.
-2.  **GPU:** A CUDA-enabled GPU is highly recommended for reasonable training times. Unsloth is optimized for NVIDIA GPUs (T4, Ampere, etc.).
+2.  **GPU:** A CUDA-enabled GPU is highly recommended for reasonable training times. Unsloth is optimized for NVIDIA GPUs.
 3.  **Dependencies:** Install the required Python libraries. You can typically install them using pip:
     ```bash
     # Install Unsloth (includes dependencies like torch, transformers, peft, accelerate, bitsandbytes)
