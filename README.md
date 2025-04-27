@@ -59,6 +59,6 @@ Execute the scripts sequentially in the following order:
 
 Or you can just run:
  ```bash
-    sbatch run_finetune.sh
-    ```
+ sbatch run_finetune.sh
+ ```
 
